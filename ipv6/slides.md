@@ -78,6 +78,7 @@ mdc: true
 # NAT (Network Address Translation)
 IP Addresses are translated between public and private, s.t. each home, business, etc. has their own router which knows how to route calls internally to devices.
 
+[https://cidr.xyz/]()
 ## NEED TO ADD PICTURE HERE BECAUSE THE MERMAID GRAPH ISN'T WORKING
 ```mermaid
 graph TD;
