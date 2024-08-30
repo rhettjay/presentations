@@ -1,165 +1,142 @@
 ---
 theme: the-unnamed
+layout: about-me
+helloMsg: Who am I?
+name: "Rhett Bulkley"
+imageSrc: "./assets/profile_family.jpeg"
+job: "software developer"
+line1: "oss maintainer @standardjs"
+line2: "father of 3 -"
+---
+# About me
+---
 layout: cover
 background: text-center
 highlighter: shikiji
-lineNumbers: true
 transition: slide-left
-title: ESM - CJS
+title: IPV6
 mdc: true
 ---
-
-# The future has arrived IPV6
-
+🚀 ☠️  🎮 "(1983) War Games - Starring Matthew Broderick: A young man finds a back door into a military central computer in which reality is confused with game-playing, possibly starting World War III."
+---
+layout: default
+---
 ## Overview:
 - What is an IP Address?
   - What necessitates a version 6? What happened to version 5?
 - What benefits does IPV6 offer over IPV4?
 - Looking to the future
   - What can we expect the next 10 years to look like?
-<br/>
-<br/>
-<footnote size="-4">
-🚀 ☠️  🎮 "(1983) War Games - Starring Matthew Broderick: A young man finds a back door into a military central computer in which reality is confused with game-playing, possibly starting World War III."
-</footnote>
+
+<footer class="absolute bottom-0 left-0 right-0 p-2">
+{{ $nav.currentPage }} / {{ $nav.total }}
+</footer>
+---
+mdc: true
+---
+# [Review] What is an IP Address?
+> IP Address are a digital representation of an network address used for host identification.
+> An address consists of four of 4 sets of octets* or bytes. Each octect is 3 commonly represented as 1-3 digits.
+
+</br>
+</br>
+
+For example:
+```sh
+185.107.800.231 #<-- IP address represented in digits
+10111001 01101011 01010000 11100111 # <-- Represented in binary octet sets
+```
+<footer class="absolute bottom-0 left-0 right-0 p-2">
+{{ $nav.currentPage }} / {{ $nav.total }}
+</footer>
+---
+mdc: true
+---
+# IPV4 Maths
+>An octet has a highest possible value of 255 (i.e. 11111111).
+>This is to say 0-255 (256) possible digits per octet.
+
+$1byte=8bits$
+
+$4bytes=(8*4)=32bits$
+
+$256*256*256*256=256^4=2^{32}=4294967296\ possible\ values$
+
+*This number is simply not high enough for each device to be assigned an address.*
+
+## Result: We need another solution
+
+<footer class="absolute bottom-0 left-0 right-0 p-2">
+{{ $nav.currentPage }} / {{ $nav.total }}
+</footer>
+
 ---
 layout: default
+mdc: true
 ---
-```html
-<!DOCTYPE html>
-<html>
-  <body>
-    <form id="myForm" onsubmit="submitHandler(event)">
-      <label for="inputField">Input:</label>
-      <input type="text" id="inputField" name="inputField" />
 
-      <button
-        id="myButton"
-        class="btn"
-        name="actionButton"
-        value="clickValue"
-        type="button"
-        title="Click this button"
-        style="background-color: blue; color: white"
-      >
-        Click Me
-      </button>
-    </form>
+# NAT (Network Address Translation)
+IP Addresses are translated between public and private, s.t. each home, business, etc. has their own router which knows how to route calls internally to devices.
 
-    <script>
-      function submitHandler(e) {
-        e.preventDefault();
-        const formData = new FormData(e.currentTarget);
-        alert(formData.get("inputField"));
-      }
-    </script>
-  </body>
-</html>
+## NEED TO ADD PICTURE HERE BECAUSE THE MERMAID GRAPH ISN'T WORKING
+```mermaid
+graph TD;
+  B[Router]-> C{ROUTER};
+  Note over B,C: PUBLIC IP;
+  C -->|Host - 192.168.1.121| D{NO PUBLIC IP};
+  C -->|Host - 192.168.1.124| E{NO PUBLIC IP};
 ```
 
-<br/>
-
----
-layout: default
----
-```html
-<!DOCTYPE html>
-<html>
-  <body>
-    <form id="myForm" onsubmit="submitHandler(event)">
-      <label for="inputField">Input:</label>
-      <input type="text" id="inputField" name="inputField" />
-
-      <button
-        id="myButton"
-        class="btn"
-        name="actionButton"
-        value="clickValue"
-        type="submit"
-        title="Click this button"
-        style="background-color: blue; color: white"
-      >
-        Click Me
-      </button>
-    </form>
-
-    <script>
-      function submitHandler(e) {
-        e.preventDefault();
-        const formData = new FormData(e.currentTarget);
-        alert(formData.get("inputField"));
-      }
-    </script>
-  </body>
-</html>
-```
-
-<br/>
-
----
-layout: about-me
-
-helloMsg: Who am I?
-name: "Rhett Bulkley"
-imageSrc: "./assets/profile_family.jpeg"
-job: "mediocre software developer -"
-line1: "oss maintainer @standardjs -"
-line2: "father of 3 -"
-
----
+<footer class="absolute bottom-0 left-0 right-0 p-2">
+{{ $nav.currentPage }} / {{ $nav.total }}
+</footer>
 ---
 layout: cover
 ---
-# What is an IP Address?
+# IPV6: *the future has arrived*
 
-[An Ipaddress](./assets/ip_address.jpeg)
+> Q: What necessitates IPV6?:
+> More addresses
+
+Eight groups of four hexadecimal digits (or 128 bits / 16 bytes)
 ```sh
+# Example
+2001:0db8:0000:0000:0000:8a2e:0370:7334
 ```
----
 
-# Why do we need version 6?
-> Wait... what happened to version 5?
+$4*8=128\ bits = 16\ bytes$
+
+$4^8=2^{128}= ~340\ undecillion\ possible\ addresses$
+
+<footer class="absolute bottom-0 left-0 right-0 p-2">
+{{ $nav.currentPage }} / {{ $nav.total }}
+</footer>
+---
+layout: default
+---
+# What does this mean? (Pros/Cons)
+
+## ~~NAT~~
+Instead there are enough numbers for every device to be assigned a public IP address.
+
+>We will still want to/need to rely on common firewall protections to avoid security breaches.
+
+<footer class="absolute bottom-0 left-0 right-0 p-2">
+{{ $nav.currentPage }} / {{ $nav.total }}
+</footer>
 
 ---
+layout: default
 ---
-# What 
-```js
-// module.js
-'use strict';
-exports.a = 'a';
-exports.b = 'b';
-exports.c = 'c';
+# Pros/Cons Cont.
 
-module.exports = Object.assign(cjsModule,{
-  default: a,
-  b,
-  c
-})
-// index.js
-const cjsModule = require('./module');
-cjsModule.a = 'z';
-console.log(cjsModule);
-// {a: 'z', b: 'b', c: 'c'}
-```
----
----
-## ESM
-```js
-// module.js
-export let a = 'a';
-export let b = 'b';
-export let c = 'c';
-// index.js
-import * as esmModule from './module.js';
-esmModule.a = 'z';
-console.log(esmModule);
+Cloud IP allocation costs decrease because of higher supply of IP Addresses.
 
-// result:
-esmModule.a = 'z';
-            ^
-TypeError: Cannot assign to read only property 'a' of object '[object Module]'
-```
+<footer class="absolute bottom-0 left-0 right-0 p-2">
+{{ $nav.currentPage }} / {{ $nav.total }}
+</footer>
+
 ---
-## ESM vs CJS
-Discussion
+layout: end
 ---
+# Thank you!
