@@ -119,7 +119,9 @@ layout: default
 ## ~~NAT~~
 Instead there are enough numbers for every device to be assigned a public IP address.
 
->We will still want to/need to rely on common firewall protections to avoid security breaches.
+* We will still want to/need to rely on common firewall protections to avoid security breaches.
+* Windows CVE vulnerability likely tied to NAT/IPV6 issue
+* Larger extension headers
 
 <footer class="absolute bottom-0 left-0 right-0 p-2">
 {{ $nav.currentPage }} / {{ $nav.total }}
@@ -130,7 +132,10 @@ layout: default
 ---
 # Pros/Cons Cont.
 
-Cloud IP allocation costs decrease because of higher supply of IP Addresses.
+* Cloud IP allocation costs decrease because of higher supply of IP Addresses.
+* SLAAC (Stateless Address Autoconfiguration)
+* Multicasting
+* Router performance increase
 
 <footer class="absolute bottom-0 left-0 right-0 p-2">
 {{ $nav.currentPage }} / {{ $nav.total }}
