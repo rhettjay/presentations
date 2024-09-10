@@ -74,34 +74,93 @@ $256*256*256*256=256^4=2^{32}=4294967296\ possible\ values$
 layout: default
 mdc: true
 ---
-
 # NAT (Network Address Translation)
-IP Addresses are translated between public and private, s.t. each home, business, etc. has their own router which knows how to route calls internally to devices.
+> IP Addresses are translated between public and private, s.t. each home, business, etc. has their own router which knows how to route calls internally to devices.
 
-[https://cidr.xyz/]()
-## NEED TO ADD PICTURE HERE BECAUSE THE MERMAID GRAPH ISN'T WORKING
 ```mermaid
-graph TD;
-  B[Router]-> C{ROUTER};
-  Note over B,C: PUBLIC IP;
-  C -->|Host - 192.168.1.121| D{NO PUBLIC IP};
-  C -->|Host - 192.168.1.124| E{NO PUBLIC IP};
+flowchart
+    subgraph Gateway
+        Public --> |NAT| Private;
+    end
+  ISP <--> Gateway;
+
+```
+
+---
+layout: center
+mdc: true
+---
+
+```mermaid
+flowchart TD
+    subgraph LAN/NAT
+    subgraph Private
+        192.168.0.1 <-.-> 192.168.1.123;
+        192.168.0.1 <-.-> 192.168.1.122;
+    end
+    Gateway
+    subgraph Public
+        172.10.111.92;
+    end
+end
+    Public o-.-o Gateway o-.-o Private;
+  ISP <--> LAN/NAT;
 ```
 
 <footer class="absolute bottom-0 left-0 right-0 p-2">
 {{ $nav.currentPage }} / {{ $nav.total }}
 </footer>
+
 ---
-layout: cover
+layout: iframe-right
+url: https://cidr.xyz/
+---
+
+# What is a CIDR?
+> A CIDR is a classification of network. Defined as "Classless Inter Domain Routing",
+it is a way of allocating IP addresses into subnets.
+
+
+**see to [aws - what is a cidr](https://aws.amazon.com/what-is/cidr/) for more info**
+
+<footer class="absolute bottom-0 left-0 right-0 p-2">
+{{ $nav.currentPage }} / {{ $nav.total }}
+</footer>
+
+---
+layout: center
 ---
 # IPV6: *the future has arrived*
+<footer class="absolute bottom-0 left-0 right-0 p-2">
+{{ $nav.currentPage }} / {{ $nav.total }}
+</footer>
 
-> Q: What necessitates IPV6?:
-> More addresses
+---
+layout: default
+---
 
-Eight groups of four hexadecimal digits (or 128 bits / 16 bytes)
+> Why IPV6?
+
+  We're out of IP Address space
+
+> What is it?
+
+  Eight groups of hexadecimal digits (or 128 bits / 16 bytes)
+
+> What about IPV5?
+
+  Intended for streams, it had a 32 bit limitation and was thus never officially adopted.
+
+  (See [IEN 119](https://www.rfc-editor.org/ien/ien119.txt))
+
+---
+layout: default
+mdc: true
+---
+
+### Example.
+
 ```sh
-# Example
 2001:0db8:0000:0000:0000:8a2e:0370:7334
 ```
 
@@ -109,17 +168,20 @@ $4*8=128\ bits = 16\ bytes$
 
 $4^8=2^{128}= ~340\ undecillion\ possible\ addresses$
 
+![](/assets/ipv6.png)
+
+**see [RFC 2460](https://www.rfc-editor.org/rfc/rfc2460) for further details
 <footer class="absolute bottom-0 left-0 right-0 p-2">
 {{ $nav.currentPage }} / {{ $nav.total }}
 </footer>
+
 ---
 layout: default
+mdc: default
 ---
-# What does this mean? (Pros/Cons)
-
-## ~~NAT~~
-Instead there are enough numbers for every device to be assigned a public IP address.
-
+# What does this mean?
+* ~~NAT~~
+  * Instead there are enough numbers for every device to be assigned a public IP address.
 * We will still want to/need to rely on common firewall protections to avoid security breaches.
 * Windows CVE vulnerability likely tied to NAT/IPV6 issue
 * Larger extension headers
@@ -131,8 +193,7 @@ Instead there are enough numbers for every device to be assigned a public IP add
 ---
 layout: default
 ---
-# Pros/Cons Cont.
-
+# Cont.
 * Cloud IP allocation costs decrease because of higher supply of IP Addresses.
 * SLAAC (Stateless Address Autoconfiguration)
 * Multicasting
@@ -141,6 +202,54 @@ layout: default
 <footer class="absolute bottom-0 left-0 right-0 p-2">
 {{ $nav.currentPage }} / {{ $nav.total }}
 </footer>
+
+---
+layout: full
+mdc: true
+drawings:
+  enabled: true
+---
+
+```mermaid
+flowchart TD
+    subgraph LAN/NAT
+    subgraph Private
+        2001:0db8:0000:0000:0000:8a2e:0370:7334 <-.-> 2001:0db8:0000:0000:0000:8a2e:0370:7335;
+        2001:0db8:0000:0000:0000:8a2e:0370:7334 <-.-> 2001:0db8:0000:0000:0000:8a2e:0370:7336;
+    end
+    Gateway
+    subgraph Public
+        2001:0db8:0000:0000:0000:8a2e:0370:7334;
+    end
+end
+    Public o-.-o Gateway o-.-o Private;
+  ISP <--> LAN/NAT;
+```
+
+<footer class="absolute bottom-0 left-0 right-0 p-2">
+{{ $nav.currentPage }} / {{ $nav.total }}
+</footer>
+
+---
+layout: full
+mdc: true
+drawings:
+  enabled: true
+---
+
+```mermaid
+flowchart TD
+    subgraph WAN
+        2001:0db8:0000:0000:0000:8a2e:0370:7334 <-.-> |Gateway| Endpoint-2001:0db8:0000:0000:0000:8a2e:0370:7335;
+        2001:0db8:0000:0000:0000:8a2e:0370:7334 <-.-> |Gateway| Endpoint-2001:0db8:0000:0000:0000:8a2e:0370:7336;
+    end
+  ISP <--> WAN;
+```
+
+<footer class="absolute bottom-0 left-0 right-0 p-2">
+{{ $nav.currentPage }} / {{ $nav.total }}
+</footer>
+
 
 ---
 layout: end
