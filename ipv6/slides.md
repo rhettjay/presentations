@@ -1,5 +1,15 @@
 ---
 theme: the-unnamed
+author: Rhett Bulkley
+title: IPv6
+download: true
+exportFilename: cis-620-ipv6
+export:
+    format: pdf
+    timeout: 30000
+    dark: true
+    withClicks: true
+    withToc: false
 layout: about-me
 helloMsg: Who am I?
 name: "Rhett Bulkley"
@@ -17,7 +27,12 @@ transition: slide-left
 title: IPV6
 mdc: true
 ---
-🚀 ☠️  🎮 "(1983) War Games - Starring Matthew Broderick: A young man finds a back door into a military central computer in which reality is confused with game-playing, possibly starting World War III."
+🚀 ☠️  🎮 "(1983) WarGames - Starring Matthew Broderick: A young man finds a back door into a military central computer in which reality is confused with game-playing, possibly starting World War III."*
+
+<footer class="absolute bottom-0 left-0 right-0 p-5">
+*WarGames 1983 - IMDb
+</br> footage used under Creative Commons License
+</footer>
 ---
 layout: default
 ---
@@ -34,7 +49,7 @@ layout: default
 ---
 mdc: true
 ---
-# [Review] What is an IP Address?
+# **Review:** What is an IP Address?
 > IP Address are a digital representation of an network address used for host identification.
 > An address consists of four of 4 sets of octets* or bytes. Each octect is 3 commonly represented as 1-3 digits.
 
@@ -52,7 +67,7 @@ For example:
 ---
 mdc: true
 ---
-# IPV4 Maths
+# **Review:** IPV4 Maths
 >An octet has a highest possible value of 255 (i.e. 11111111).
 >This is to say 0-255 (256) possible digits per octet.
 
@@ -64,7 +79,7 @@ $256*256*256*256=256^4=2^{32}=4294967296\ possible\ values$
 
 *This number is simply not high enough for each device to be assigned an address.*
 
-## Result: We need another solution
+## **Result:** We need another solution -->
 
 <footer class="absolute bottom-0 left-0 right-0 p-2">
 {{ $nav.currentPage }} / {{ $nav.total }}
@@ -121,7 +136,7 @@ url: https://cidr.xyz/
 it is a way of allocating IP addresses into subnets.
 
 
-**see to [aws - what is a cidr](https://aws.amazon.com/what-is/cidr/) for more info**
+**see [aws - what is a cidr](https://aws.amazon.com/what-is/cidr/) for more info**
 
 <footer class="absolute bottom-0 left-0 right-0 p-2">
 {{ $nav.currentPage }} / {{ $nav.total }}
@@ -265,7 +280,7 @@ url: https://www.malwaretech.com/2024/08/exploiting-CVE-2024-38063.html
 There is still a lot to be learned and worked through on IPV6
 
 ---
-layout: center
+layout: full
 ---
 ```python
 from scapy.all import *
@@ -309,12 +324,28 @@ for i in range(60):
 print("")
 ```
 ---
-layout: iframe-right
-url: https://github.com/ynwarcs/CVE-2024-38063
+layout: default
 ---
 
 # Patch your OS!
 
+https://github.com/ynwarcs/CVE-2024-38063/
+
+---
+layout: default
+---
+References:
+- WarGames (1983) - IMDb | https://www.imdb.com/title/tt0086567/?ref_=fn_al_tt_2
+- What is CIDR? - CIDR Blocks and Notation | https://aws.amazon.com/what-is/cidr/
+- CIDR.xyz | https://cidr.xyz
+- IPv4 vs. IPv6 - What is IPV6? | https://www.thousandeyes.com/learning/techtorials/ipv4-vs-ipv6
+- Guidlines on Firewalls and Firewall Policy - NIST Special Publication 800-41 Rev. 1 | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf
+- IEN119 | https://www.rfc-editor.org/ien/ien119.txt (What is IPV5)
+- RFC2460 | https://www.rfc-editor.org/rfc/rfc2460
+- RFC8200 | https://www.rfc-editor.org/rfc/rfc8200
+- What Happened to IPv5? | https://www.lifewire.com/what-happened-to-ipv5-3971327
+- CVE-2024-38063 | https://github.com/ynwarcs/CVE-2024-38063
+- Exploiting CVE-2024-38063 | https://www.malwaretech.com/2024/08/exploiting-CVE-2024-38063.html
 ---
 layout: end
 ---
