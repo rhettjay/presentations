@@ -148,7 +148,7 @@ layout: center
 # IPV6: *the future has arrived*
 Officially adopted in 2017 by the IETF as the new standard protocol for internet addressing. However it is still widely underutilized.
 
-Internet Engineering Task Force, which is a standards organiation for the internet.
+Internet Engineering Task Force, which is a standards organization for the internet.
 
 [See IETF.org](https://ietf.org)
 <footer class="absolute bottom-0 left-0 right-0 p-2">
@@ -197,6 +197,14 @@ $4^8=2^{128}= ~340\ undecillion\ possible\ addresses$
 
 ---
 layout: default
+---
+# IPV6 IOT
+- Moving to the edge means more devices
+- 340 undecillion allows for billions per person alive today.
+- mobile networks will need this extra space to expand 5G s.t. each network capable device can perform optimally
+
+---
+layout: default
 mdc: default
 ---
 # What does this mean?
@@ -222,6 +230,59 @@ layout: default
 <footer class="absolute bottom-0 left-0 right-0 p-2">
 {{ $nav.currentPage }} / {{ $nav.total }}
 </footer>
+
+---
+layout: default
+mdc: default
+---
+# Header Differences
+```markdown
+
+                              IPV6                                                                    IPV4
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ |  0                   1                   2                   3
+   |Version| Traffic Class |           Flow Label                  | |  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ |  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |         Payload Length        |  Next Header  |   Hop Limit   | |  |Version|  IHL  |Type of Service|          Total Length         |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ |  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                                                               | |  |         Identification        |Flags|      Fragment Offset    |
+   +                                                               + |  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                                                               | |  |  Time to Live |    Protocol   |         Header Checksum       |
+   +                         Source Address                        + |  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                                                               | |  |                       Source Address                          |
+   +                                                               + |  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                                                               | |  |                    Destination Address                        |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ |  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                                                               | |  |                    Options                    |    Padding    |
+   +                                                               + |  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                                                               | |
+   +                      Destination Address                      + |
+   |                                                               | |
+   +                                                               + |
+   |                                                               | |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ |
+
+
+```
+  <footer class="absolute bottom-0 left-0 right-0 p-2">
+  {{ $nav.currentPage }} / {{ $nav.total }}
+  </footer>
+
+<!-- notes
+# Benefits:
+- With headers being vastly simplified routers don't need to hold as much in their routing tables to account for address translation.
+-->
+
+---
+layout: default
+---
+# Issues:
+Why has IPV6 been so slow to adopt?
+- Expensive dual compatible machinery (still in early adoption phase) <-- AWS is pushing harder though. IPV4 is being charged, IPV6 is free -->
+- The cost incentives don't line up for ISPs (economies of scale disincentivize the disruption)
+- Security concerns
+  - Because in IPV6 IPSec can be built in, data authentication can be built in. However NAT provides valuable insight to the calls moving through network/transport layers.
+  - Some mistakenly over burden NAT instead of placing the burden on the firewall leading to a misconception that IPV4 is less secure.
+
 
 ---
 layout: full
