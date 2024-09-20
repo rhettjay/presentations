@@ -271,19 +271,6 @@ mdc: default
 # Benefits:
 - With headers being vastly simplified routers don't need to hold as much in their routing tables to account for address translation.
 -->
-
----
-layout: default
----
-# Issues:
-Why has IPV6 been so slow to adopt?
-- Expensive dual compatible machinery (still in early adoption phase) <-- AWS is pushing harder though. IPV4 is being charged, IPV6 is free -->
-- The cost incentives don't line up for ISPs (economies of scale disincentivize the disruption)
-- Security concerns
-  - Because in IPV6 IPSec can be built in, data authentication can be built in. However NAT provides valuable insight to the calls moving through network/transport layers.
-  - Some mistakenly over burden NAT instead of placing the burden on the firewall leading to a misconception that IPV4 is less secure.
-
-
 ---
 layout: full
 mdc: true
@@ -330,6 +317,20 @@ flowchart TD
 <footer class="absolute bottom-0 left-0 right-0 p-2">
 {{ $nav.currentPage }} / {{ $nav.total }}
 </footer>
+
+
+---
+layout: default
+---
+# Issues:
+Why has IPV6 been so slow to adopt?
+- Expensive dual compatible machinery (still in early adoption phase) <-- AWS is pushing harder though. IPV4 is being charged, IPV6 is free -->
+- The cost incentives don't line up for ISPs (economies of scale disincentivize the disruption)
+- Security concerns
+  - Because in IPV6 IPSec can be built in, data authentication can be built in. However NAT provides valuable insight to the calls moving through network/transport layers.
+  - Some rely NAT instead of placing the burden on the firewall leading to a misconception that IPV4 is less secure.
+  - early adoption risk
+
 
 ---
 layout: iframe-right
