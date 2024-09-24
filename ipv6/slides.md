@@ -11,14 +11,21 @@ export:
     withClicks: true
     withToc: false
 layout: about-me
-helloMsg: Who am I?
-name: "Rhett Bulkley"
+helloMsg: $~ whoami
+name: "$ Rhett Bulkley"
 imageSrc: "./assets/profile_family.jpeg"
-job: "software developer"
-line1: "oss maintainer @standardjs"
+job: "software developer -"
+line1: "oss maintainer @standardjs -"
 line2: "father of 3 -"
 ---
 # About me
+
+
+---
+layout: iframe
+url: https://www.youtube.com/embed/O77v7lVKgNU?si=iSauGqpYIS3ik19r
+---
+
 ---
 layout: cover
 background: text-center
@@ -27,11 +34,10 @@ transition: slide-left
 title: IPV6
 mdc: true
 ---
-🚀 ☠️  🎮 "(1983) WarGames - Starring Matthew Broderick: A young man finds a back door into a military central computer in which reality is confused with game-playing, possibly starting World War III."*
+🚀 ☠️  🎮 "(1983) WarGames - Starring Matthew Broderick: A young man finds a back door into a military central computer in which reality is confused with game-playing, possibly starting World War III." -- (WarGames 1983 - IMDb)
 
 <footer class="absolute bottom-0 left-0 right-0 p-5">
-*WarGames 1983 - IMDb
-</br> footage used under Creative Commons License
+{{ $nav.currentPage }} / {{ $nav.total }}
 </footer>
 ---
 layout: default
@@ -211,8 +217,6 @@ mdc: default
 * ~~NAT~~
   * Instead there are enough numbers for every device to be assigned a public IP address.
 * We will still want to/need to rely on common firewall protections to avoid security breaches.
-* Windows CVE vulnerability likely tied to NAT/IPV6 issue
-* Larger extension headers
 
 <footer class="absolute bottom-0 left-0 right-0 p-2">
 {{ $nav.currentPage }} / {{ $nav.total }}
@@ -232,8 +236,8 @@ layout: default
 </footer>
 
 ---
-layout: default
-mdc: default
+layout: full 
+mdc: true 
 ---
 # Header Differences
 ```markdown
@@ -328,7 +332,7 @@ Why has IPV6 been so slow to adopt?
 - The cost incentives don't line up for ISPs (economies of scale disincentivize the disruption)
 - Security concerns
   - Because in IPV6 IPSec can be built in, data authentication can be built in. However NAT provides valuable insight to the calls moving through network/transport layers.
-  - Some rely NAT instead of placing the burden on the firewall leading to a misconception that IPV4 is less secure.
+  - Some rely NAT instead of placing the burden on the firewall leading to a misconception that IPV6 is less secure.
   - early adoption risk
 
 
@@ -339,10 +343,13 @@ url: https://www.malwaretech.com/2024/08/exploiting-CVE-2024-38063.html
 # CVE-2024-38063
 - RCE In Windows
 
+![](/assets/cve.png)
+
 There is still a lot to be learned and worked through on IPV6
 
 ---
-layout: full
+layout: none
+mdc: true
 ---
 ```python
 from scapy.all import *

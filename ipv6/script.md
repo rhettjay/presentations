@@ -1,14 +1,15 @@
 # Intro
 Hi CIS 620, my name is Rhett Bulkley!
 A little bit about me: 
-- I'm a software engineer based of out Utah working at another university there.
-- This is my last class at CSU 
+- I'm a software engineer based of out Utah
 - Happily married and a proud dad of 3 amazing kids
+- I'm designing a printed circuit board for a keyboard called the neolexis
+- This is my last class at CSU
 
 # Funny / WarGames
-Let's watch a short clip togheter.
+Let's watch a short clip together.
 I'd normally pause during this section and ask who recognized any of those noises when our protagonist was connecting.
-I was there for those days and that was called Dial-up. Specifically what's demonstrated is a technic of network hacking/discovery called hammer dialing where a person calls a series of modems until they find a computer.
+I was there for those days and that was called Dial-up. Specifically what's demonstrated is a technique of network hacking/discovery called hammer dialing where a person calls a series of modems until they find a computer.
 
 This was my favorite movie growing up and is one of the many things I find so fascinating about technology. I love technology and am excited to take this opportunity to share what I have learned about internet addressing protocols!
 
@@ -86,6 +87,8 @@ Here's what the script looked like. Pretty simple (though not necessarily intuit
 # Takeaway
 So what's the lesson? Patch your OS.
 
+
+# References
 In all earnestness though, despite the issues we've seen from adoption ipv6 is an awesome advancement and will hopefully lead to some pretty cool improvements over the long term as routers learn to optimize for the header parsing and route tables no longer require translation. It'll be interesting to see how the future generation as they start to associate hex instead of 192.168 or 10.10. It'll definitely be a colloquil challenge for those of the slightly older generation like myself.
 
 I tried to keep this more high level than perhaps necessary, as going too deep into the weeds isn't necessarily everyone's cup of tea. That being said, if you found any of this research interesting feel free to reach out over the interwebs. I am more than happy nerd out and discuss intricate details of Ipv6 headers and network identifiers.
