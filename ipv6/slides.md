@@ -1,38 +1,44 @@
+<!------->
+<!--theme: the-unnamed-->
+<!--author: Rhett Bulkley-->
+<!--title: IPv6-->
+<!--download: true-->
+<!--exportFilename: cis-620-ipv6-->
+<!--export:-->
+<!--    format: pdf-->
+<!--    timeout: 30000-->
+<!--    dark: true-->
+<!--    withClicks: true-->
+<!--    withToc: false-->
+<!--layout: about-me-->
+<!--helloMsg: Who am I?-->
+<!--name: "Rhett Bulkley"-->
+<!--imageSrc: "./assets/profile_family.jpeg"-->
+<!--job: "software developer"-->
+<!--line1: "oss maintainer @standardjs"-->
+<!--line2: "father of 3 -"-->
+<!------->
+<!--# About me-->
+<!------->
+<!--layout: cover-->
+<!--background: text-center-->
+<!--highlighter: shikiji-->
+<!--transition: slide-left-->
+<!--title: IPV6-->
+<!--mdc: true-->
+<!------->
+<!--🚀 ☠️  🎮 "(1983) WarGames - Starring Matthew Broderick: A young man finds a back door into a military central computer in which reality is confused with game-playing, possibly starting World War III."*-->
+<!---->
+<!--<footer class="absolute bottom-0 left-0 right-0 p-5">-->
+<!--*WarGames 1983 - IMDb-->
+<!--</br> footage used under Creative Commons License-->
+<!--</footer>-->
 ---
-theme: the-unnamed
-author: Rhett Bulkley
-title: IPv6
-download: true
-exportFilename: cis-620-ipv6
-export:
-    format: pdf
-    timeout: 30000
-    dark: true
-    withClicks: true
-    withToc: false
-layout: about-me
-helloMsg: Who am I?
-name: "Rhett Bulkley"
-imageSrc: "./assets/profile_family.jpeg"
-job: "software developer"
-line1: "oss maintainer @standardjs"
-line2: "father of 3 -"
+layout: default
 ---
-# About me
----
-layout: cover
-background: text-center
-highlighter: shikiji
-transition: slide-left
-title: IPV6
-mdc: true
----
-🚀 ☠️  🎮 "(1983) WarGames - Starring Matthew Broderick: A young man finds a back door into a military central computer in which reality is confused with game-playing, possibly starting World War III."*
+# A view into my brain
+<iframe src="https://giphy.com/embed/8rHwhRnIXTPOVrT1SP" width="100%" height="100%" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/pixel-board-chimpers-8rHwhRnIXTPOVrT1SP"></a></p>
 
-<footer class="absolute bottom-0 left-0 right-0 p-5">
-*WarGames 1983 - IMDb
-</br> footage used under Creative Commons License
-</footer>
 ---
 layout: default
 ---
@@ -232,12 +238,12 @@ layout: default
 </footer>
 
 ---
-layout: default
+layout: full
 mdc: default
 ---
+
 # Header Differences
 ```markdown
-
                               IPV6                                                                    IPV4
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ |  0                   1                   2                   3
    |Version| Traffic Class |           Flow Label                  | |  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
@@ -261,16 +267,17 @@ mdc: default
    |                                                               | |
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ |
 
-
 ```
-  <footer class="absolute bottom-0 left-0 right-0 p-2">
-  {{ $nav.currentPage }} / {{ $nav.total }}
-  </footer>
+<footer class="absolute bottom-0 left-0 right-0 p-2">
+  {{ $nav.currentPage }} / {{ $nav.total }} Note: fragment headers in ipv6 are handeled by source nodes only unlike ipv4 which uses routers.
+</footer>
 
-<!-- notes
+<!--
+notes
 # Benefits:
 - With headers being vastly simplified routers don't need to hold as much in their routing tables to account for address translation.
 -->
+
 ---
 layout: full
 mdc: true
@@ -344,6 +351,7 @@ There is still a lot to be learned and worked through on IPV6
 ---
 layout: full
 ---
+
 ```python
 from scapy.all import *
 
@@ -385,6 +393,8 @@ for i in range(60):
     time.sleep(1)
 print("")
 ```
+
+
 ---
 layout: default
 ---
