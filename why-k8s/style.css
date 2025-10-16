@@ -1,0 +1,61 @@
+/* ===== Brand ===== */
+:root {
+  --brand-navy: #002E5D;
+  --brand-white: #FFFFFF;
+
+  --slidev-theme-primary: var(--brand-navy);
+  --slidev-theme-background: var(--brand-navy);
+  --slidev-theme-foreground: var(--brand-white);
+}
+
+/* Optional: self-host Ringside Narrow (uncomment + supply files) */
+/*
+@font-face {
+  font-family: 'Ringside Narrow';
+  src: url('/assets/fonts/RingsideNarrow-Book.woff2') format('woff2'),
+       url('/assets/fonts/RingsideNarrow-Book.woff') format('woff');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Ringside Narrow';
+  src: url('/assets/fonts/RingsideNarrow-Bold.woff2') format('woff2'),
+       url('/assets/fonts/RingsideNarrow-Bold.woff') format('woff');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+*/
+
+html, body, .slidev-layout {
+  font-family: 'Ringside Narrow', 'Helvetica Neue', 'Arial Narrow', Arial, sans-serif;
+  color: var(--brand-white);
+  background: var(--brand-navy);
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  color: var(--brand-white) !important;
+  letter-spacing: .2px;
+}
+
+/* Code blocks contrast */
+pre, code, .shiki {
+  border-radius: 10px;
+  border: 1px solid rgba(0,46,93,0.15);
+}
+
+/* Mermaid theme */
+.mermaid {
+  --mermaid-font-family: 'Ringside Narrow', 'Helvetica Neue', 'Arial Narrow', Arial, sans-serif;
+  --mermaid-edge-color: #002E5D;
+  --mermaid-node-border: #002E5D;
+  --mermaid-label-fg-color: #002E5D;
+}
+
+/* Utilities */
+.badge {
+  display:inline-block; padding:.25rem .6rem; border:1px solid var(--brand-white);
+  border-radius:.45rem; font-size:.75rem; color:var(--brand-white);
+}
+/*.invert {*/
+/*  background: var(--brand-white); color: var(--brand-navy);*/
+/*  padding: 1rem; border-radius: .75rem;*/
+/*}*/

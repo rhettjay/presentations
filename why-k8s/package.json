@@ -1,0 +1,19 @@
+{
+  "name": "esm-cjs",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.2.4",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "slidev-theme-the-unnamed": "^0.0.15"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.47.1"
+  }
+}
