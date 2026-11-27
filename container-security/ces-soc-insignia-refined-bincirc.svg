@@ -71,7 +71,7 @@
       .cls-67{fill:#eaecf1}
       .cls-68{fill:#000000}
       .cls-69{fill:none;stroke:#000000;stroke-width:18;stroke-linejoin:round}
-      .cls-70{font-family:&apos;Aurebesh AF Canon&apos;, sans-serif;font-size:72px;fill:#ffffff;letter-spacing:7px;text-anchor:middle}
+      .cls-70{fill:#ffffff}
       .cls-71{font-family:Menlo, monospace;font-size:48px;font-weight:bold;fill:#ffffff;text-anchor:middle}
       .cls-72{fill:#ffffff;stroke:#000000;stroke-miterlimit:10}
     </style>
@@ -250,18 +250,25 @@
       <circle cx="390" cy="342" r="9" class="cls-1"/>
       <circle cx="750" cy="342" r="9" class="cls-1"/>
       <circle cx="340" cy="595" r="9" class="cls-1"/>
-      <circle cx="805" cy="595" r="9" class="cls-1"/>
-      <circle cx="405" cy="802" r="9" class="cls-1"/>
-      <circle cx="738" cy="802" r="9" class="cls-1"/>
+      <circle cx="805" cy="598.125" r="9" class="cls-1"/>
+      <circle cx="405" cy="806.469" r="9" class="cls-1"/>
+      <circle cx="738" cy="804" r="9" class="cls-1"/>
       <circle cx="405" cy="1062" r="9" class="cls-1"/>
-      <circle cx="738" cy="1062" r="9" class="cls-1"/>
+      <circle cx="721" cy="1064" r="9" class="cls-1"/>
     </g>
     <polygon points="40,30 1105,30 1105,900 572.5,1365 40,900" class="cls-69"/>
-    <g id="production-text">
-      <text transform="matrix(1 0 0 1 572.5 158)" x="0" y="0" xml:space="preserve" class="cls-70"><tspan x="0" y="0">WATCHMEN</tspan></text>
-      <text transform="matrix(1 0 0 1 167.5 416)" x="0" y="0" xml:space="preserve" class="cls-71"><tspan x="0" y="0">CES</tspan></text>
-      <text transform="matrix(1 0 0 1 977.5 416)" x="0" y="0" xml:space="preserve" class="cls-71"><tspan x="0" y="0">SOC</tspan></text>
+    <g>
+      <path d="M319.788 154.904 L319.788 110.696 L316.692 107.6 L249.444 107.6 L246.348 110.696 L246.348 154.904 L249.444 158 L316.692 158 Z M307.548 119.12 L307.548 146.48 L258.588 146.48 L258.588 119.12 Z" class="cls-70"/>
+      <path d="M335.428 107.6 L335.428 129.2 L379.708 129.2 L422.044 107.6 L396.7 107.6 L376.9 117.68 L347.668 117.68 L347.668 107.6 Z M335.428 158 L347.668 158 L347.668 147.92 L376.9 147.92 L396.7 158 L422.044 158 L379.708 136.4 L335.428 136.4 Z" class="cls-70"/>
+      <polygon points="498.164,131 483.044,131 466.844,147.2 464.684,147.2 464.684,107.6 452.444,107.6 452.444,147.2 450.284,147.2 434.084,131 418.964,131 445.964,158 471.164,158" class="cls-70"/>
+      <path d="M511.644 107.6 L511.644 142.16 L523.884 142.16 L523.884 107.6 Z M528.204 123.44 L528.204 142.16 L540.444 142.16 L540.444 123.44 Z M544.764 123.44 L544.764 158 L557.004 158 L557.004 123.44 Z" class="cls-70"/>
+      <path d="M652.564 119.12 L652.564 107.6 L573.364 107.6 L573.364 119.12 Z M638.164 138.56 L638.164 127.04 L587.044 127.04 L587.044 138.56 Z M652.564 158 L652.564 146.48 L573.364 146.48 L573.364 158 Z" class="cls-70"/>
+      <polygon points="712.844,146.48 684.764,146.48 699.74,119.12 709.964,119.12 709.964,107.6 692.324,107.6 664.604,158 705.788,158" class="cls-70"/>
+      <polygon points="801.852,119.12 801.852,107.6 772.98,107.6 755.7,143.672 738.42,107.6 724.884,107.6 749.004,158 762.396,158 780.972,119.12 782.412,119.12 782.412,158 794.652,158 794.652,119.12" class="cls-70"/>
+      <path d="M860.548 118.4 L881.5 158 L894.532 158 L867.748 107.6 L853.276 107.6 L831.1 149.144 C828.436 144.104 826.132 137.552 826.132 131.144 C826.132 122.36 829.084 113.576 833.908 107.6 L823.108 107.6 C818.284 114.008 815.332 122.504 815.332 131.936 C815.332 142.232 818.86 151.52 824.548 158 L839.524 158 Z" class="cls-70"/>
     </g>
+    <text transform="matrix(1 0 0 1 167.5 416)" x="0" y="0" xml:space="preserve" class="cls-71"><tspan x="0" y="0">CES</tspan></text>
+    <text transform="matrix(1 0 0 1 977.5 416)" x="0" y="0" xml:space="preserve" class="cls-71"><tspan x="0" y="0">SOC</tspan></text>
     <circle cx="94.917" cy="439.088" r="10" class="cls-72"/>
     <circle cx="134.07" cy="439.088" r="10" class="cls-72"/>
     <circle cx="159.917" cy="439.088" r="10" class="cls-72"/>
